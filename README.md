@@ -6,6 +6,20 @@ Generates compassionate, stage-specific patient messages for IVF coordinators af
 
 ---
 
+## Demo
+
+![Hero — empty state](media/screenshots/hero.png)
+
+![Sarah M. loaded — mid-stimulation](media/screenshots/demo-patient-loaded.png)
+
+![Full output — patient message, coordinator summary, clinical flags](media/screenshots/output-full.png)
+
+![Mobile layout](media/screenshots/mobile-view.png)
+
+See [`media/`](media/) for the full screenshot set and a demo video walkthrough.
+
+---
+
 ## The Problem
 
 [Cycle Clarity](https://cycleclarity.com) — founded by Dr. John Schnorr of Coastal Fertility Specialists — uses AI to perform 3D follicular ultrasounds in under a minute and automatically emails a standardized folliculogram to each patient. After that, the physician reviews the data and makes a dosing decision.
