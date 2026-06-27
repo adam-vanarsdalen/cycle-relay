@@ -37,7 +37,7 @@ export function ProviderToggle({ provider, onChange }: ProviderToggleProps) {
           }`}
         >
           Ollama
-          <span className="opacity-60">Local / HIPAA</span>
+          <span className="opacity-60">Local</span>
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 opacity-70" />
         </button>
 
