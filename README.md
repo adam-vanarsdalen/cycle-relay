@@ -113,11 +113,58 @@ git clone https://github.com/adam-vanarsdalen/cycle-relay
 cd cycle-relay
 npm install
 cp .env.example .env.local
-# Edit .env.local and add your ANTHROPIC_API_KEY
+# Edit .env.local — see options below
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+### Option 1 — Claude (default)
+
+Add your Anthropic API key to `.env.local`:
+
+```
+ANTHROPIC_API_KEY=your_key_here
+NEXT_PUBLIC_MODEL_PROVIDER=claude
+```
+
+### Option 2 — Ollama with a cloud model
+
+Ollama supports `:cloud` model tags that route inference through [ollama.com](https://ollama.com) — no local GPU required. The model runs in the cloud but the API call goes through your local Ollama daemon.
+
+1. Install Ollama: https://ollama.com/download
+2. Pull a cloud model:
+   ```bash
+   ollama pull minimax-m3:cloud
+   ```
+3. Configure `.env.local`:
+   ```
+   NEXT_PUBLIC_MODEL_PROVIDER=ollama
+   NEXT_PUBLIC_OLLAMA_BASE_URL=http://localhost:11434
+   NEXT_PUBLIC_OLLAMA_MODEL=minimax-m3:cloud
+   ```
+
+Other capable cloud models: `qwen3.5:cloud`, `deepseek-v3.1:671b-cloud`, `kimi-k2.5:cloud`
+
+### Option 3 — Ollama with a local model
+
+All inference stays on your machine — suitable for HIPAA-conscious environments where PHI must not leave the local network.
+
+1. Install Ollama: https://ollama.com/download
+2. Pull a model:
+   ```bash
+   ollama pull llama3.1        # 8B, fast, good quality
+   ollama pull qwen2.5:14b     # stronger reasoning
+   ollama pull mistral         # lightweight alternative
+   ```
+3. Configure `.env.local`:
+   ```
+   NEXT_PUBLIC_MODEL_PROVIDER=ollama
+   NEXT_PUBLIC_OLLAMA_BASE_URL=http://localhost:11434
+   NEXT_PUBLIC_OLLAMA_MODEL=llama3.1
+   ```
+
+The model must support structured JSON output. Most models 7B+ work well; smaller models may produce malformed responses.
 
 ---
 
