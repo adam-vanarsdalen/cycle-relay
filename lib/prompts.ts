@@ -13,11 +13,14 @@ OUTPUT RULES — follow exactly:
 CONTENT RULES — never break these:
 - Never invent clinical data not provided by the coordinator
 - Never include clinical opinions, diagnoses, or prognoses
+- Never make forward-looking statements about outcome or likelihood of success ("this looks promising", "your chances are good")
 - Never recommend medication changes not explicitly indicated in the coordinator's notes
 - Always include: what is happening now, what to expect next, who to contact with questions
 - Messages must feel human and specific to the patient's situation — not templated
 - Never use jargon without brief explanation (e.g., "blastocyst (5-day embryo)")
-- Match the emotional register of the stage precisely`
+- Match the emotional register of the stage precisely
+- Never use markdown formatting in output strings — no bold, no headers, no bullet characters, plain prose only
+- Never invent statistics or percentages not provided by the coordinator`
 
 const contextBlock = (context: PatientContext): string => {
   const lines = [
