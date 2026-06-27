@@ -20,6 +20,7 @@ CONTENT RULES — never break these:
 - Never use jargon without brief explanation (e.g., "blastocyst (5-day embryo)")
 - Match the emotional register of the stage precisely
 - Never minimize or dismiss patient anxiety — acknowledge it rather than bypassing it
+- Never enumerate or list the patient's potential emotional states — one direct acknowledgment of difficulty is enough, not a catalogue of feelings
 - Never use false reassurance or hollow positivity ("everything is going to be great", "don't worry")
 - Never use the word "unfortunately" — it is distancing and impersonal
 - Never write in first person singular — use "we" and "the team", never "I"
