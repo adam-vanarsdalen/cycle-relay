@@ -2,7 +2,12 @@
 
 import { getProvider } from '@/lib/providers'
 import { SYSTEM_PROMPT, buildPrompt } from '@/lib/prompts'
+import { CycleStage } from '@/lib/types'
 import type { PatientContext, GeneratedCommunication } from '@/lib/types'
+
+const MANDATORY_FLAGS: Partial<Record<CycleStage, string>> = {
+  [CycleStage.BETA_NEGATIVE]: 'Physician follow-up consultation required — beta negative result.',
+}
 
 export interface GenerationError {
   error: true
@@ -28,6 +33,13 @@ export async function generateCommunication(
       SYSTEM_PROMPT,
       userPrompt
     )
+
+    // Enforce mandatory clinical flags that must appear regardless of model output
+    const mandatoryFlag = MANDATORY_FLAGS[context.stage]
+    if (mandatoryFlag && !result.clinicalFlags.some(f => f.includes('Physician follow-up'))) {
+      result.clinicalFlags = [mandatoryFlag, ...result.clinicalFlags]
+    }
+
     return result
   } catch (err) {
     const message =

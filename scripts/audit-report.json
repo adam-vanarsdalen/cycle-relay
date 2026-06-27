@@ -1,0 +1,15 @@
+{
+  "issues": [
+    {
+      "severity": "CRITICAL",
+      "location": "Output > Clinical flags",
+      "description": "Clinical flags panel missing for beta negative result"
+    },
+    {
+      "severity": "WARN",
+      "location": "Audit log",
+      "description": "Expected ≥2 entries, found 1"
+    }
+  ],
+  "consoleErrors": []
+}
