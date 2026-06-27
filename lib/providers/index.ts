@@ -1,12 +1,10 @@
 import type { IModelProvider } from './types'
+import type { ModelProvider } from '@/lib/types'
 import { ClaudeProvider } from './claude'
 import { OllamaProvider } from './ollama'
 
-export function getProvider(): IModelProvider {
-  const providerEnv = process.env.NEXT_PUBLIC_MODEL_PROVIDER ?? 'claude'
-  if (providerEnv === 'ollama') {
-    return new OllamaProvider()
-  }
+export function getProvider(provider: ModelProvider): IModelProvider {
+  if (provider === 'ollama') return new OllamaProvider()
   return new ClaudeProvider()
 }
 

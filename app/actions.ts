@@ -3,7 +3,7 @@
 import { getProvider } from '@/lib/providers'
 import { SYSTEM_PROMPT, buildPrompt } from '@/lib/prompts'
 import { CycleStage } from '@/lib/types'
-import type { PatientContext, GeneratedCommunication } from '@/lib/types'
+import type { PatientContext, GeneratedCommunication, ModelProvider } from '@/lib/types'
 
 const MANDATORY_FLAGS: Partial<Record<CycleStage, string>> = {
   [CycleStage.BETA_NEGATIVE]: 'Physician follow-up consultation required — beta negative result.',
@@ -15,7 +15,8 @@ export interface GenerationError {
 }
 
 export async function generateCommunication(
-  context: PatientContext
+  context: PatientContext,
+  providerName: ModelProvider
 ): Promise<GeneratedCommunication | GenerationError> {
   if (!context.patientName?.trim()) {
     return { error: true, message: 'Patient name is required.' }
@@ -25,7 +26,7 @@ export async function generateCommunication(
   }
 
   try {
-    const provider = getProvider()
+    const provider = getProvider(providerName)
     const userPrompt = buildPrompt(context.stage, context)
     const result = await provider.generateCommunication(
       context.stage,

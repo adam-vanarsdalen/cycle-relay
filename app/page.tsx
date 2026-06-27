@@ -20,7 +20,7 @@ export default function Home() {
   const handleGenerate = useCallback(
     async (context: PatientContext) => {
       setError(null)
-      const result = await generateCommunication(context)
+      const result = await generateCommunication(context, provider)
 
       if ('error' in result) {
         setError(result.message)
