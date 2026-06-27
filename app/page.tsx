@@ -12,7 +12,7 @@ const POLICY_TAG =
   'HIPAA: No PHI stored. AI-assisted draft only. Coordinator review required before sending.'
 
 export default function Home() {
-  const [provider, setProvider] = useState<ModelProvider>('claude')
+  const [provider, setProvider] = useState<ModelProvider>('ollama')
   const [output, setOutput] = useState<GeneratedCommunication | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [auditEntries, setAuditEntries] = useState<AuditEntry[]>([])
@@ -27,14 +27,14 @@ export default function Home() {
         return
       }
 
-      const comm: GeneratedCommunication = { ...result, provider }
+      const comm: GeneratedCommunication = { ...result }
       setOutput(comm)
 
       const entry: AuditEntry = {
         id: crypto.randomUUID(),
         timestamp: comm.timestamp,
         stage: comm.stage,
-        provider,
+        provider: comm.provider,
         policyTag: POLICY_TAG,
       }
 
