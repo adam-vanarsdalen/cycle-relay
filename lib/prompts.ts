@@ -19,6 +19,11 @@ CONTENT RULES — never break these:
 - Messages must feel human and specific to the patient's situation — not templated
 - Never use jargon without brief explanation (e.g., "blastocyst (5-day embryo)")
 - Match the emotional register of the stage precisely
+- Never minimize or dismiss patient anxiety — acknowledge it rather than bypassing it
+- Never use false reassurance or hollow positivity ("everything is going to be great", "don't worry")
+- Never use the word "unfortunately" — it is distancing and impersonal
+- Never write in first person singular — use "we" and "the team", never "I"
+- Never pivot immediately to next steps after a difficult result — give space for the patient's emotional reality first
 - Never use markdown formatting in output strings — no bold, no headers, no bullet characters, plain prose only
 - Never invent statistics or percentages not provided by the coordinator`
 
