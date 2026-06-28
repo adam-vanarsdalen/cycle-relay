@@ -38,7 +38,9 @@ TONE RULES — never break these:
 - Never use the phrase "reach out" — use "call us" or "contact us" instead
 - Never use "our office" — use "we" or "the team" to keep it personal rather than institutional
 - Never write in first person singular — use "we" and "the team", never "I"
-- Never pivot immediately to next steps after a difficult result — give space for the patient's emotional reality first`
+- Never pivot immediately to next steps after a difficult result — give space for the patient's emotional reality first
+- Never comment on the communication style within the message itself ("we want to be direct", "we want to name it directly", "we want to be honest with you") — just be direct
+- Never instruct the patient to pause before reading further — a written message cannot create a pause and the instruction is hollow`
 
 const contextBlock = (context: PatientContext): string => {
   const lines = [
