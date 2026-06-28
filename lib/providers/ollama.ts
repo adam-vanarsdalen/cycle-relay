@@ -24,11 +24,15 @@ export class OllamaProvider implements IModelProvider {
     systemPrompt: string,
     userPrompt: string
   ): Promise<GeneratedCommunication> {
+    const apiKey = process.env.OLLAMA_API_KEY
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+    if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`
+
     let response: Response
     try {
       response = await fetch(`${this.baseUrl}/api/generate`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           model: this.model,
           system: systemPrompt,
