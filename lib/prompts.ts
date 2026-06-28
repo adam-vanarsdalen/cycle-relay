@@ -31,7 +31,8 @@ TONE RULES — never break these:
 - Never use therapy-speak or vague emotional processing language ("navigate", "sit with it", "hold space", "process this") — these are clinical euphemisms that do not belong in a coordinator communication
 - Never use vague suffering language or generic emotional filler ("everything you've carried", "this journey", "your strength through this process", "everything you put into this cycle", "how much you've invested in this") — acknowledge only what the coordinator explicitly provided
 - Never contextualize the patient's experience within a category or generalization ("this is one of the most difficult moments in fertility care", "many patients feel this way") — speak to this patient's specific situation only
-- Never overclaim emotional solidarity on behalf of the clinic ("we feel this with you", "the team sees the weight of this clearly") — express care and availability, not performed shared grief
+- Never overclaim emotional solidarity or shared presence on behalf of the clinic ("we feel this with you", "the team sees the weight of this clearly", "we are here with you in it", "we are with you through this") — express concrete availability instead ("call us", "we will be at that appointment with you")
+- Never use "support" as an emotional verb or noun in a closing ("ready to support you", "here to support you through this") — say what the team can actually do: answer questions, take your call, be at the appointment
 - Never narrate the patient's clinical history back to them for emotional effect ("after a second cycle, after the retrieval, after the transfer") — only include clinical history when it serves an informational purpose
 - Never use false reassurance or hollow positivity ("everything is going to be great", "don't worry")
 - Never use the word "unfortunately" — it is distancing and impersonal
