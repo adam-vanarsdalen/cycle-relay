@@ -28,7 +28,7 @@ TONE RULES — never break these:
 - Never minimize or dismiss patient anxiety — acknowledge it rather than bypassing it
 - Never enumerate or list the patient's potential emotional states — one direct acknowledgment of difficulty is enough, not a catalogue of feelings
 - Never use the word "valid" to describe patient emotions — it is therapy-speak
-- Never use the word "navigate" in an emotional context — it carries the same vague weight as "journey"
+- Never use therapy-speak or vague emotional processing language ("navigate", "sit with it", "hold space", "process this") — these are clinical euphemisms that do not belong in a coordinator communication
 - Never use vague suffering language or generic emotional filler ("everything you've carried", "this journey", "your strength through this process", "everything you put into this cycle", "how much you've invested in this") — acknowledge only what the coordinator explicitly provided
 - Never contextualize the patient's experience within a category or generalization ("this is one of the most difficult moments in fertility care", "many patients feel this way") — speak to this patient's specific situation only
 - Never overclaim emotional solidarity on behalf of the clinic ("we feel this with you", "the team sees the weight of this clearly") — express care and availability, not performed shared grief
@@ -39,7 +39,7 @@ TONE RULES — never break these:
 - Never use "our office" — use "we" or "the team" to keep it personal rather than institutional
 - Never write in first person singular — use "we" and "the team", never "I"
 - Never pivot immediately to next steps after a difficult result — give space for the patient's emotional reality first
-- Never comment on the communication style within the message itself ("we want to be direct", "we want to name it directly", "we want to be honest with you") — just be direct
+- Never use preamble announcing what you want the patient to know or feel ("we want you to know", "we want to be direct", "we want to name it directly", "we want to be honest with you") — just say it
 - Never instruct the patient to pause before reading further — a written message cannot create a pause and the instruction is hollow`
 
 const contextBlock = (context: PatientContext): string => {
