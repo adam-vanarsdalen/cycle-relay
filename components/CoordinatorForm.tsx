@@ -27,9 +27,6 @@ export function CoordinatorForm({ provider, onGenerate }: CoordinatorFormProps) 
   const [activeDemoId, setActiveDemoId] = useState<string | null>(null)
   const [isPending, startTransition] = useTransition()
 
-  const isOllamaOnCloud =
-    provider === 'ollama' && process.env.NEXT_PUBLIC_MODEL_PROVIDER !== 'ollama'
-
   const set = (field: keyof PatientContext, value: string) => {
     setContext((prev) => ({ ...prev, [field]: value }))
     setActiveDemoId(null)
@@ -185,23 +182,10 @@ export function CoordinatorForm({ provider, onGenerate }: CoordinatorFormProps) 
           </div>
         </div>
 
-        {/* Ollama info state */}
-        {isOllamaOnCloud && (
-          <div className="rounded-lg bg-emerald-600/10 border border-emerald-600/20 p-3">
-            <p className="text-xs text-emerald-400 leading-relaxed">
-              <span className="font-medium">Ollama — Local HIPAA Deployment</span>
-              <span className="block mt-1 text-emerald-400/70">
-                On the live demo, generation requires a local Ollama instance. PHI never
-                leaves your network with this mode. See README for setup instructions.
-              </span>
-            </p>
-          </div>
-        )}
-
         <div className="flex gap-2">
           <button
             type="submit"
-            disabled={!canGenerate || isOllamaOnCloud}
+            disabled={!canGenerate}
             className="flex-1 flex items-center justify-center gap-2 bg-[#06B6D4] hover:bg-[#06B6D4]/90 disabled:bg-[#06B6D4]/30 disabled:cursor-not-allowed text-[#0B1628] font-semibold text-sm py-2.5 px-4 rounded-lg transition-all duration-150"
           >
             {isPending ? (
